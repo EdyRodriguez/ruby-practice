@@ -1,0 +1,26 @@
+<%stylesheet_link_tag "articles"%>
+<div class="articles-card">
+  <div class="articles-card-header">
+    <h1 class= "articles-card-title"><%= @article.title %></h1>
+    <p>
+      <%= @article.created_at.strftime("%B %e, %Y") %>
+    </p>
+  </div>
+
+  <p class="articles-card-body"><%= @article.body %></p>
+
+<ul class="articles-card-options">
+  <li><%= link_to "Edit", edit_article_path(@article) %></li>
+  <li><%= link_to "Destroy", article_path(@article), data:{
+    turbo_method: :delete,
+    turbo_confirm: "Are you sure?"}
+    %>
+    </li>
+</ul>
+</div>
+
+<h2>Comments</h2>
+<%= render @article.comments %>
+
+<h2>Add a comment:</h2>
+<%= render "comments/form" %>
