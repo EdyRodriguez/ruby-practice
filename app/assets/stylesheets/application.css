@@ -21,14 +21,9 @@
     text-align: center;
 }
 .nav-list{
-    color: #ffffff;
     padding: 0.5rem;
     list-style: none;
     display: flex;
     flex-direction: row;
     align-items: baseline;
-}
-.nav-list li{
-    margin-right: 1rem;
-
 }
