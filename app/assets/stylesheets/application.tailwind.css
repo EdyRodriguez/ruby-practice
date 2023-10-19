@@ -2,12 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
-/*
+
 
 @layer components {
-  .btn-primary {
-    @apply py-2 px-4 bg-blue-200;
-  }
-}
 
-*/
+  .article-card{
+    @apply bg-secondary rounded-lg shadow-lg flex items-center justify-center flex-col p-6 m-3 overflow-hidden w-80 h-80;
+  }
+
+  .button-style{
+    @apply h-10 p-2 shadow-sm text-primary text-center rounded-md m-2 bg-tertiary underline  hover:bg-buttonsHover;
+  }
+
+}

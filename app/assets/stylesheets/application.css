@@ -13,17 +13,3 @@
  *= require_tree .
  *= require_self
  */
-.articles_title {
-    color: #0000ff;
-    font-size: 2rem;
-    font-weight: bold;
-    text-decoration: underline;
-    text-align: center;
-}
-.nav-list{
-    padding: 0.5rem;
-    list-style: none;
-    display: flex;
-    flex-direction: row;
-    align-items: baseline;
-}

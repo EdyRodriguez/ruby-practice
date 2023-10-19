@@ -1,19 +1,7 @@
 <%= stylesheet_link_tag "articles"%>
-<h1 class= "articles_title">Articles</h1>
-
-Our blog has <%= Article.public_count %> articles and counting!
-
-<table>
-
-    <% @articles.each do |article| %>
-        <% unless article.archived? %>
-        <tr>
-            <td >
-                <%= link_to article.title, article %>
-            </td>
-        </tr>
-    <% end %>
-    <% end %>
-</table>
-
-<%= link_to "Create new Article", new_article_path %>
+<div class="flex flex-col items-center">
+    <h1 class= "text-titles text-5xl justify-center ">Articles</h1>
+    <%= link_to "Create new Article", new_article_path, class: "button-style" %>
+    <p>Our blog has <%= Article.public_count %> articles and counting!</p>
+    <%=render "articleCards", article: @article%>
+</div>

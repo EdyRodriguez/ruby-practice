@@ -1,0 +1,17 @@
+<div class="flex flex-row flex-wrap justify-center content-center">
+    <% @articles.each do |article| %>
+        <% unless article.archived? %>
+            <div class=" article-card ">
+                <div class=" h-1/3 ">
+                    <h1 class=" text-titles text-3xl"> <%= article.title %> </h1>
+                </div>
+                <div class="h-1/3 mb-10 overflow-hidden text-ellipsis text-center">
+                    <p class="  whitespace-normal overflow-hidden p-3"> <%= article.body %></p>
+                </div>
+                <div class=" h-1/3">
+                    <%= link_to "Read", article, class:"button-style" %>
+                </div>
+            </div>
+        <% end %>
+    <% end %>
+</div>
